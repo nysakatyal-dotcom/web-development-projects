@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a second-year BCA student exploring programming, web development, and software development.">
+    <meta name="description" content="Nysa Katyal's personal portfolio showcasing her BCA journey, programming skills, projects, interests, and goals.">
 
-    <title>My Portfolio | Aspiring Software Developer</title>
+    <title>Nysa Katyal | Aspiring Software Developer</title>
 
     <style>
         :root {
             --navy: #102a43;
-            --navy-light: #243b53;
-            --blue: #2864f0;
+            --navy-light: #243f5a;
+            --blue: #2563eb;
             --blue-light: #eff6ff;
             --white: #ffffff;
-            --background: #f8fafc;
+            --background: #f5f8fc;
             --text: #334155;
             --muted: #64748b;
-            --border: #dbe5f0;
+            --border: #e2e8f0;
         }
 
         * {
@@ -29,20 +29,19 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 85px;
+            scroll-padding-top: 90px;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            background: var(--white);
+                         Roboto, Arial, sans-serif;
             color: var(--text);
-            line-height: 1.7;
+            background: var(--white);
+            line-height: 1.75;
         }
 
         a {
             color: inherit;
-            text-decoration: none;
         }
 
         .container {
@@ -52,59 +51,60 @@
 
         /* Navigation */
 
-        .navbar {
+        header {
             position: sticky;
             top: 0;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.96);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.97);
             border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(12px);
         }
 
-        .nav-content {
+        .navbar {
             min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            gap: 20px;
         }
 
         .logo {
             color: var(--navy);
-            font-size: 1.45rem;
+            font-size: 1.35rem;
             font-weight: 800;
-            letter-spacing: -0.8px;
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 30px;
             flex-wrap: wrap;
+            gap: 22px;
+            list-style: none;
         }
 
         .nav-links a {
             color: var(--navy-light);
+            font-size: 0.92rem;
             font-weight: 600;
-            transition: color 0.2s ease;
+            text-decoration: none;
         }
 
         .nav-links a:hover {
             color: var(--blue);
         }
 
-        /* Hero section */
+        /* Hero */
 
         .hero {
-            padding: 100px 0;
-            overflow: hidden;
+            padding: 85px 0;
+            background: linear-gradient(135deg, #ffffff, #f1f6ff);
         }
 
         .hero-layout {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 64px;
+            gap: 60px;
         }
 
         .hero-content {
@@ -114,22 +114,21 @@
 
         .eyebrow {
             display: inline-block;
-            padding: 8px 18px;
-            margin-bottom: 24px;
-            border-radius: 999px;
+            padding: 7px 15px;
+            margin-bottom: 22px;
+            border-radius: 30px;
             background: var(--blue-light);
             color: var(--blue);
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             font-weight: 700;
         }
 
         h1 {
-            max-width: 760px;
-            margin-bottom: 24px;
             color: var(--navy);
-            font-size: clamp(2.7rem, 6vw, 4.6rem);
-            line-height: 1.12;
-            letter-spacing: -2.5px;
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+            line-height: 1.13;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
         }
 
         h1 span {
@@ -138,31 +137,41 @@
 
         .hero-description {
             max-width: 650px;
-            margin-bottom: 30px;
             color: var(--muted);
-            font-size: 1.15rem;
-            line-height: 1.9;
+            font-size: 1.08rem;
+            margin-bottom: 28px;
+        }
+
+        .hero-image {
+            flex: 0 1 340px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .avatar {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid var(--white);
+            box-shadow: 0 15px 45px rgba(16, 42, 67, 0.14);
         }
 
         .buttons {
             display: flex;
-            align-items: center;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 13px;
         }
 
         .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 52px;
-            padding: 13px 23px;
-            border: 1px solid transparent;
-            border-radius: 10px;
+            display: inline-block;
+            padding: 12px 21px;
+            border-radius: 9px;
             font-weight: 700;
-            transition: transform 0.2s ease,
-                        background 0.2s ease,
-                        border-color 0.2s ease;
+            text-decoration: none;
+            transition: 0.2s ease;
         }
 
         .button:hover {
@@ -179,78 +188,132 @@
         }
 
         .button-secondary {
-            border-color: var(--border);
             background: var(--white);
             color: var(--navy);
+            border: 1px solid var(--border);
         }
 
         .button-secondary:hover {
             border-color: var(--blue);
         }
 
-        .hero-image {
-            flex: 0 1 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .avatar {
-            display: block;
-            width: 100%;
-            max-width: 340px;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border: 7px solid var(--blue-light);
-            border-radius: 50%;
-            box-shadow: 0 20px 55px rgba(16, 42, 67, 0.14);
-        }
-
-        /* General sections */
+        /* Sections */
 
         section:not(.hero) {
-            padding: 85px 0;
+            padding: 76px 0;
         }
 
-        .section-alt {
+        .alternate {
             background: var(--background);
         }
 
         .section-heading {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             color: var(--navy);
-            font-size: clamp(2rem, 4vw, 2.6rem);
-            line-height: 1.25;
-            letter-spacing: -1px;
+            font-size: clamp(1.9rem, 4vw, 2.5rem);
+            line-height: 1.3;
+            letter-spacing: -0.8px;
         }
 
         .section-intro {
-            max-width: 700px;
-            margin-bottom: 35px;
+            max-width: 720px;
+            margin-bottom: 30px;
             color: var(--muted);
         }
 
-        .about-text {
-            max-width: 850px;
-            font-size: 1.05rem;
+        /* About */
+
+        .about-card {
+            padding: 30px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .about-card p + p {
+            margin-top: 15px;
+        }
+
+        .personal-details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 24px;
+        }
+
+        .detail {
+            padding: 17px;
+            border-radius: 10px;
+            background: var(--blue-light);
+        }
+
+        .detail strong {
+            display: block;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+        .detail span {
+            color: var(--muted);
+            overflow-wrap: anywhere;
         }
 
         /* Skills */
 
         .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 13px;
-            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
         }
 
-        .skill {
-            padding: 10px 17px;
+        .skill-card {
+            padding: 23px;
             border: 1px solid var(--border);
+            border-radius: 13px;
+            background: var(--white);
+            transition: transform 0.2s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(16, 42, 67, 0.07);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-size: 1.12rem;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        /* Education */
+
+        .education-card {
+            padding: 28px;
+            border-left: 4px solid var(--blue);
             border-radius: 10px;
             background: var(--white);
+            box-shadow: 0 5px 22px rgba(16, 42, 67, 0.05);
+        }
+
+        .education-card h3 {
             color: var(--navy);
-            font-weight: 650;
+            margin-bottom: 6px;
+        }
+
+        .education-card .institution {
+            color: var(--blue);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: var(--muted);
         }
 
         /* Projects */
@@ -258,159 +321,189 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
+            gap: 22px;
         }
 
         .project-card {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 28px;
+            padding: 27px;
             border: 1px solid var(--border);
-            border-radius: 18px;
+            border-radius: 14px;
             background: var(--white);
-            box-shadow: 0 8px 24px rgba(16, 42, 67, 0.04);
+            box-shadow: 0 5px 20px rgba(16, 42, 67, 0.04);
             transition: transform 0.2s ease,
                         box-shadow 0.2s ease;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 34px rgba(16, 42, 67, 0.09);
-        }
-
-        .project-card h3 {
-            margin-bottom: 10px;
-            color: var(--navy);
-            font-size: 1.25rem;
-        }
-
-        .project-card p {
-            margin-bottom: 20px;
-            color: var(--muted);
+            box-shadow: 0 12px 30px rgba(16, 42, 67, 0.08);
         }
 
         .project-tag {
             display: inline-block;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             padding: 5px 11px;
-            border-radius: 999px;
+            border-radius: 30px;
             background: var(--blue-light);
             color: var(--blue);
             font-size: 0.82rem;
             font-weight: 700;
         }
 
+        .project-card h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
         .project-link {
             margin-top: auto;
             color: var(--blue);
             font-weight: 700;
+            text-decoration: none;
         }
 
         .project-link:hover {
             text-decoration: underline;
         }
 
+        /* Hobbies and goals */
+
+        .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .hobby {
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background: var(--white);
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .goals-list {
+            padding-left: 22px;
+        }
+
+        .goals-list li {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
         /* Contact */
 
         .contact-box {
             padding: 38px;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            background: var(--white);
+            border-radius: 17px;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .contact-box h2 {
+            margin-bottom: 12px;
+            font-size: 2rem;
         }
 
         .contact-box p {
             margin-bottom: 22px;
-            color: var(--muted);
+            color: #dbeafe;
+        }
+
+        .contact-box .button {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .contact-email {
+            display: inline-block;
+            margin: 0 0 22px;
+            color: #ffffff;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
         }
 
         /* Footer */
 
         footer {
-            padding: 26px 0;
+            padding: 25px 0;
             border-top: 1px solid var(--border);
             background: var(--white);
             text-align: center;
             color: var(--muted);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--blue);
-            font-weight: 650;
+        footer p + p {
+            margin-top: 4px;
         }
 
-        /* Mobile responsiveness */
+        /* Responsive layout */
 
         @media (max-width: 760px) {
-            .nav-content {
+            .navbar {
                 padding: 15px 0;
-                flex-direction: column;
                 align-items: flex-start;
-                gap: 12px;
+                flex-direction: column;
+                gap: 10px;
             }
 
             .nav-links {
-                gap: 17px;
-                font-size: 0.93rem;
+                gap: 12px 18px;
+                font-size: 0.9rem;
             }
 
             .hero {
-                padding: 65px 0;
+                padding: 60px 0;
             }
 
             .hero-layout {
                 flex-direction: column-reverse;
+                gap: 32px;
                 align-items: flex-start;
-                gap: 35px;
             }
 
             .hero-content {
-                flex-basis: auto;
                 width: 100%;
+                flex-basis: auto;
             }
 
             .hero-image {
                 width: 100%;
                 flex: none;
-                justify-content: center;
             }
 
             .avatar {
-                max-width: 230px;
+                max-width: 220px;
             }
 
             h1 {
-                letter-spacing: -1.5px;
+                letter-spacing: -1.2px;
             }
 
             section:not(.hero) {
-                padding: 60px 0;
+                padding: 55px 0;
             }
 
-            .projects-grid {
+            .skills-grid,
+            .projects-grid,
+            .personal-details {
                 grid-template-columns: 1fr;
             }
 
+            .about-card,
             .contact-box {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .nav-links {
-                gap: 12px;
-                font-size: 0.85rem;
-            }
-
-            .buttons {
-                align-items: stretch;
-                flex-direction: column;
-            }
-
-            .button {
-                width: 100%;
+                padding: 23px;
             }
         }
 
@@ -422,7 +515,7 @@
             *,
             *::before,
             *::after {
-                transition-duration: 0.01ms !important;
+                transition: none !important;
             }
         }
     </style>
@@ -430,37 +523,43 @@
 
 <body>
 
-    <header class="navbar">
-        <nav class="container nav-content" aria-label="Main navigation">
-            <a class="logo" href="#home">MyPortfolio.</a>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="#home">Nysa Katyal.</a>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
+
         <!-- Hero -->
         <section class="hero" id="home">
             <div class="container hero-layout">
 
                 <div class="hero-content">
-                    <span class="eyebrow">BCA Student · Aspiring Developer</span>
+                    <span class="eyebrow">
+                        BCA Student · Aspiring Software Developer
+                    </span>
 
                     <h1>
-                        Hello, I'm a
-                        <span>Developer in Progress.</span>
+                        Hi, I'm Nysa <span>Katyal.</span>
                     </h1>
 
                     <p class="hero-description">
-                        I'm a second-year BCA student exploring programming,
-                        web development, and technology. I enjoy learning by
-                        building practical projects and improving my skills
-                        one step at a time.
+                        I'm a second-year Bachelor of Computer Applications
+                        student with a growing interest in programming,
+                        web development, and technology. I enjoy turning
+                        ideas into practical projects, exploring new tools,
+                        and learning something new every day.
                     </p>
 
                     <div class="buttons">
@@ -468,11 +567,8 @@
                             Explore My Projects
                         </a>
 
-                        <a class="button button-secondary"
-                           href="https://github.com/nysakatyal-dotcom"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Visit My GitHub ↗
+                        <a class="button button-secondary" href="#contact">
+                            Get in Touch
                         </a>
                     </div>
                 </div>
@@ -480,61 +576,212 @@
                 <div class="hero-image">
                     <img
                         src="avatar.png"
-                        alt="Illustrated developer avatar"
+                        alt="Illustrated avatar representing Nysa Katyal"
                         class="avatar"
-                        width="340"
-                        height="340">
+                        width="320"
+                        height="320">
                 </div>
 
             </div>
         </section>
 
-        <!-- About -->
-        <section class="section-alt" id="about">
+        <!-- About Me -->
+        <section class="alternate" id="about">
             <div class="container">
                 <h2 class="section-heading">About Me</h2>
 
-                <p class="about-text">
-                    I'm a second-year Bachelor of Computer Applications (BCA)
-                    student interested in programming, web development, and
-                    software development. I learn by creating practical
-                    projects, experimenting with new tools, and strengthening
-                    my technical skills. My goal is to keep growing as a
-                    developer and build projects that demonstrate what I learn.
+                <p class="section-intro">
+                    A little more about who I am, what I enjoy,
+                    and where I want to go.
                 </p>
+
+                <div class="about-card">
+                    <p>
+                        Hello! I'm Nysa Katyal, a second-year BCA student
+                        at JIMS VK. I'm interested in understanding how
+                        technology works and how programming can be used
+                        to solve everyday problems.
+                    </p>
+
+                    <p>
+                        I'm building my foundation in programming and
+                        web development through coursework, independent
+                        practice, and hands-on projects. I believe that
+                        consistency, curiosity, and learning from mistakes
+                        are important parts of becoming a better developer.
+                    </p>
+
+                    <p>
+                        Apart from technology, I enjoy painting, baking,
+                        listening to music, and exploring new skills.
+                        These interests give me opportunities to be
+                        creative, try new things, and look at ideas
+                        from different perspectives.
+                    </p>
+
+                    <p>
+                        My goal is to continue growing technically,
+                        create useful projects, and prepare for future
+                        opportunities in software development.
+                    </p>
+
+                    <div class="personal-details">
+                        <div class="detail">
+                            <strong>Full Name</strong>
+                            <span>Nysa Katyal</span>
+                        </div>
+
+                        <div class="detail">
+                            <strong>Age</strong>
+                            <span>19 years</span>
+                        </div>
+
+                        <div class="detail">
+                            <strong>Education</strong>
+                            <span>Bachelor of Computer Applications</span>
+                        </div>
+
+                        <div class="detail">
+                            <strong>Institution</strong>
+                            <span>JIMS VK</span>
+                        </div>
+
+                        <div class="detail">
+                            <strong>Current Focus</strong>
+                            <span>Programming and Web Development</span>
+                        </div>
+
+                        <div class="detail">
+                            <strong>Career Interest</strong>
+                            <span>Software Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <div class="container">
+                <h2 class="section-heading">Education</h2>
+
+                <p class="section-intro">
+                    My academic background and areas of learning.
+                </p>
+
+                <div class="education-card">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+
+                    <p class="institution">JIMS VK</p>
+
+                    <p>
+                        Currently pursuing my second year of BCA and
+                        developing an understanding of programming,
+                        computer applications, data structures,
+                        databases, and web technologies through
+                        academic study and personal practice.
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- Skills -->
-        <section id="skills">
+        <section class="alternate" id="skills">
             <div class="container">
                 <h2 class="section-heading">Skills & Technologies</h2>
 
                 <p class="section-intro">
-                    Technologies I'm learning and using in my projects.
+                    The technologies I'm learning and practising as I
+                    build my foundation in software development.
                 </p>
 
                 <div class="skills-grid">
-                    <span class="skill">Python</span>
-                    <span class="skill">C</span>
-                    <span class="skill">HTML5</span>
-                    <span class="skill">CSS3</span>
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">SQL</span>
-                    <span class="skill">Git & GitHub</span>
-                    <span class="skill">Figma</span>
+
+                    <article class="skill-card">
+                        <h3>Python</h3>
+                        <p>
+                            Learning programming logic, variables,
+                            conditions, loops, functions, and input
+                            validation through small projects such as
+                            a grade calculator and number guessing game.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>C Programming</h3>
+                        <p>
+                            Developing an understanding of fundamental
+                            programming concepts, control structures,
+                            functions, and problem-solving techniques.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>HTML5</h3>
+                        <p>
+                            Learning to structure web pages with semantic
+                            elements, headings, sections, links, forms,
+                            and accessible content.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>CSS3</h3>
+                        <p>
+                            Practising page styling, colors, typography,
+                            spacing, Flexbox, Grid, and responsive
+                            layouts for mobile and desktop screens.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>JavaScript</h3>
+                        <p>
+                            Exploring programming for the web, including
+                            variables, functions, events, and making
+                            website elements interactive.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>SQL</h3>
+                        <p>
+                            Learning database fundamentals, tables,
+                            queries, filtering, sorting, and retrieving
+                            information from structured data.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Git & GitHub</h3>
+                        <p>
+                            Practising repository management, committing
+                            changes, documenting projects, and publishing
+                            a website using GitHub Pages.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Figma & UI/UX</h3>
+                        <p>
+                            Exploring interface design, visual hierarchy,
+                            layouts, and the principles behind creating
+                            clear and user-friendly digital experiences.
+                        </p>
+                    </article>
+
                 </div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section class="section-alt" id="projects">
+        <section id="projects">
             <div class="container">
-                <h2 class="section-heading">Featured Projects</h2>
+                <h2 class="section-heading">My Projects</h2>
 
                 <p class="section-intro">
-                    A selection of projects from my programming and
-                    web development learning journey.
+                    Practical work that documents my learning journey
+                    and helps me apply programming concepts.
                 </p>
 
                 <div class="projects-grid">
@@ -545,29 +792,40 @@
                         <h3>Python Mini Projects</h3>
 
                         <p>
-                            A collection of beginner-friendly Python programs,
-                            including a grade calculator, number guessing game,
-                            and animated GIF creator.
+                            A collection of beginner-friendly Python
+                            programs, including a student grade calculator,
+                            a number guessing game, and an animated GIF
+                            creator. These projects help me practise
+                            programming logic and working with libraries.
                         </p>
 
                         <a class="project-link"
                            href="https://github.com/nysakatyal-dotcom/python-mini-projects"
                            target="_blank"
                            rel="noopener noreferrer">
-                            View Repository ↗
+                            View GitHub Repository ↗
                         </a>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-tag">HTML · CSS · JavaScript</span>
+                        <span class="project-tag">HTML & CSS</span>
 
                         <h3>Personal Portfolio Website</h3>
 
                         <p>
-                            A responsive portfolio built to showcase my
-                            background, technical skills, projects, and
-                            progress in web development.
+                            A responsive personal website built to present
+                            my background, skills, interests, and projects.
+                            It also gives me practical experience with
+                            page structure, styling, navigation, and
+                            publishing a website online.
                         </p>
+
+                        <a class="project-link"
+                           href="https://nysakatyal-dotcom.github.io/web-development-projects/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Website ↗
+                        </a>
 
                         <a class="project-link"
                            href="https://github.com/nysakatyal-dotcom/web-development-projects"
@@ -581,40 +839,119 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact">
+        <!-- Interests and Hobbies -->
+        <section class="alternate" id="interests">
             <div class="container">
-                <div class="contact-box">
-                    <h2 class="section-heading">Let's Connect</h2>
+                <h2 class="section-heading">Interests & Hobbies</h2>
 
+                <p class="section-intro">
+                    The things I enjoy outside my academic and technical
+                    learning journey.
+                </p>
+
+                <div class="about-card">
                     <p>
-                        You can explore my repositories and follow my journey
-                        as I continue learning and building projects.
+                        I enjoy activities that let me express creativity,
+                        relax, and discover new interests. Painting gives
+                        me a creative outlet, baking lets me experiment
+                        with new ideas, and music is one of my favourite
+                        ways to unwind.
                     </p>
 
+                    <p>
+                        I also enjoy exploring new skills and learning
+                        about things beyond my usual routine.
+                    </p>
+
+                    <div class="hobbies-list">
+                        <span class="hobby">Painting</span>
+                        <span class="hobby">Baking</span>
+                        <span class="hobby">Listening to Music</span>
+                        <span class="hobby">Exploring New Skills</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals -->
+        <section id="goals">
+            <div class="container">
+                <h2 class="section-heading">My Goals</h2>
+
+                <p class="section-intro">
+                    What I'm working towards as I continue developing
+                    my technical skills.
+                </p>
+
+                <ul class="goals-list">
+                    <li>
+                        Strengthen my programming fundamentals and
+                        problem-solving abilities.
+                    </li>
+                    <li>
+                        Build more practical projects using Python,
+                        C, HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                        Improve my understanding of databases,
+                        data structures, and software development.
+                    </li>
+                    <li>
+                        Maintain well-documented repositories and
+                        keep improving my GitHub portfolio.
+                    </li>
+                    <li>
+                        Gain practical experience and prepare for
+                        suitable internship opportunities.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="alternate" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Let's Connect</h2>
+
+                    <p>
+                        I'm always interested in learning, exploring
+                        ideas, and connecting through technology.
+                        Feel free to explore my projects or contact
+                        me by email.
+                    </p>
+
+                    <a class="contact-email"
+                       href="mailto:nysakatyal19@gmail.com">
+                        nysakatyal19@gmail.com
+                    </a>
+
                     <div class="buttons">
-                        <a class="button button-primary"
+                        <a class="button"
                            href="https://github.com/nysakatyal-dotcom"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Connect on GitHub ↗
+                            Visit My GitHub ↗
+                        </a>
+
+                        <a class="button"
+                           href="mailto:nysakatyal19@gmail.com">
+                            Email Me ↗
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Copyright -->
     <footer>
         <div class="container">
             <p>
-                Built with HTML and CSS ·
-                <a href="https://github.com/nysakatyal-dotcom"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub Profile
-                </a>
+                &copy; 2026 Nysa Katyal. All rights reserved.
             </p>
+            <p>Designed with care and built with curiosity.</p>
         </div>
     </footer>
 
