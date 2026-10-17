@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            color: #25213b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #6c4de6;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #6c4de6;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 14px;
+        }
+
+        h2 {
+            color: #6c4de6;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            background: #eee9ff;
+            color: #5135bd;
+            padding: 8px 14px;
+            border-radius: 20px;
+        }
+
+        .project {
+            padding: 15px;
+            margin-top: 12px;
+            background: #f8f6ff;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #625b79;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            section {
+                margin: 16px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <p>BCA Student | Aspiring Software Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm a second-year BCA student interested in programming,
+            web development, and technology. I'm learning by building
+            practical projects and improving my skills every day.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <span>Python</span>
+            <span>C</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>SQL</span>
+            <span>Git & GitHub</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>Python Mini Projects</h3>
+            <p>Beginner-friendly Python programs and experiments.</p>
+            <a href="https://github.com/nysakatyal-dotcom/python-mini-projects">
+                View Repository
+            </a>
+        </div>
+
+        <div class="project">
+            <h3>Web Development Projects</h3>
+            <p>My journey into creating websites using HTML and CSS.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Explore my projects and follow my learning journey on GitHub.</p>
+        <p>
+            <a href="https://github.com/nysakatyal-dotcom">
+                Visit My GitHub Profile
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio | Built with HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
