@@ -1,170 +1,602 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f3ff;
-            color: #25213b;
-            line-height: 1.6;
-        }
+    <meta name="description" content="The personal portfolio of a BCA student exploring programming, web development, and software development.">
 
-        header {
-            background: #6c4de6;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    <title>My Portfolio | Aspiring Software Developer</title>
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+    <style>
+        :root {
+            --navy: #102a43;
+            --navy-light: #243f5a;
+            --blue: #2563eb;
+            --blue-light: #eff6ff;
+            --white: #ffffff;
+            --background: #f5f8fc;
+            --text: #334155;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
 
-        nav {
-            background: #ffffff;
-            padding: 15px;
-            text-align: center;
-        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        nav a {
-            color: #6c4de6;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
 
-        section {
-            max-width: 850px;
-            margin: 25px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 14px;
-        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-        h2 {
-            color: #6c4de6;
-            margin-bottom: 15px;
-        }
+        a {
+            color: inherit;
+        }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
 
-        .skills span {
-            background: #eee9ff;
-            color: #5135bd;
-            padding: 8px 14px;
-            border-radius: 20px;
-        }
+        /* Navigation */
 
-        .project {
-            padding: 15px;
-            margin-top: 12px;
-            background: #f8f6ff;
-            border-radius: 10px;
-        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #625b79;
-        }
+        .navbar {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
+        .logo {
+            color: var(--navy);
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            list-style: none;
+        }
 
-            section {
-                margin: 16px;
-                padding: 22px;
-            }
-        }
-    </style>
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        /* Hero */
+
+        .hero {
+            background: var(--white);
+            padding: 100px 0 90px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: var(--blue-light);
+            color: var(--blue);
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            color: var(--navy);
+            font-size: clamp(2.4rem, 6vw, 4.4rem);
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 620px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            background: var(--navy-light);
+        }
+
+        .button-secondary {
+            background: var(--white);
+            color: var(--navy);
+            border: 1px solid var(--border);
+        }
+
+        .button-secondary:hover {
+            background: var(--blue-light);
+        }
+
+        /* General sections */
+
+        section {
+            padding: 76px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+            letter-spacing: -0.8px;
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .about-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(16, 42, 67, 0.04);
+        }
+
+        .about-card p + p {
+            margin-top: 14px;
+        }
+
+        /* Skills */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(16, 42, 67, 0.07);
+        }
+
+        .skill-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        /* Projects */
+
+        .projects-section {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: var(--white);
+        }
+
+        .project-label {
+            color: var(--blue);
+            background: var(--blue-light);
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            color: var(--navy);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: var(--blue);
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: auto;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact */
+
+        .contact-card {
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 18px;
+            padding: 42px 30px;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #dbeafe;
+            max-width: 560px;
+            margin: 0 auto 24px;
+        }
+
+        .contact-card .button {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 26px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive layout */
+
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 16px 0;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 12px 18px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .skill-card {
+                padding: 17px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card {
+                padding: 22px;
+            }
+
+            .contact-card {
+                padding: 32px 20px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>My Portfolio</h1>
-        <p>BCA Student | Aspiring Software Developer</p>
-    </header>
+    <header>
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="#home">MyPortfolio.</a>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm a second-year BCA student interested in programming,
-            web development, and technology. I'm learning by building
-            practical projects and improving my skills every day.
-        </p>
-    </section>
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <span class="eyebrow">BCA Student · Aspiring Developer</span>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills">
-            <span>Python</span>
-            <span>C</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>SQL</span>
-            <span>Git & GitHub</span>
-        </div>
-    </section>
+                <h1>Hello, I'm a <span>Developer in Progress.</span></h1>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+                <p>
+                    I'm a second-year BCA student exploring programming,
+                    web development, and technology. I enjoy learning by
+                    building practical projects and improving my skills
+                    one step at a time.
+                </p>
 
-        <div class="project">
-            <h3>Python Mini Projects</h3>
-            <p>Beginner-friendly Python programs and experiments.</p>
-            <a href="https://github.com/nysakatyal-dotcom/python-mini-projects">
-                View Repository
-            </a>
-        </div>
+                <div class="buttons">
+                    <a class="button button-primary" href="#projects">
+                        Explore My Projects
+                    </a>
 
-        <div class="project">
-            <h3>Web Development Projects</h3>
-            <p>My journey into creating websites using HTML and CSS.</p>
-        </div>
-    </section>
+                    <a class="button button-secondary"
+                       href="https://github.com/nysakatyal-dotcom"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit My GitHub ↗
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Explore my projects and follow my learning journey on GitHub.</p>
-        <p>
-            <a href="https://github.com/nysakatyal-dotcom">
-                Visit My GitHub Profile
-            </a>
-        </p>
-    </section>
+        <section id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About Me</h2>
+                    <p>A little about my learning journey.</p>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 My Portfolio | Built with HTML and CSS</p>
-    </footer>
+                <div class="about-card">
+                    <p>
+                        I'm pursuing a Bachelor of Computer Applications
+                        and developing my technical skills through
+                        coursework, independent practice, and personal
+                        projects.
+                    </p>
+
+                    <p>
+                        I'm currently strengthening my programming
+                        fundamentals while learning to create clean,
+                        responsive, and user-friendly websites.
+                    </p>
+
+                    <p>
+                        My goal is to keep learning, build meaningful
+                        projects, and prepare for opportunities in
+                        software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Skills & Technologies</h2>
+                    <p>Technologies I'm learning and practising.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>Python</h3>
+                        <p>Programming fundamentals and mini projects.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>C Programming</h3>
+                        <p>Problem-solving and core programming concepts.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>HTML & CSS</h3>
+                        <p>Web page structure, styling, and layouts.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>JavaScript</h3>
+                        <p>Learning interactive web development.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>SQL</h3>
+                        <p>Learning databases and query fundamentals.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and project documentation.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Figma</h3>
+                        <p>Exploring interface design and prototyping.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Featured Projects</h2>
+                    <p>A selection of my learning and development work.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-label">Python</span>
+
+                        <h3>Python Mini Projects</h3>
+
+                        <p>
+                            A collection of beginner-friendly programs,
+                            including a grade calculator, a number
+                            guessing game, and an animated GIF creator.
+                        </p>
+
+                        <a class="project-link"
+                           href="https://github.com/nysakatyal-dotcom/python-mini-projects"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Repository ↗
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-label">HTML & CSS</span>
+
+                        <h3>Personal Portfolio Website</h3>
+
+                        <p>
+                            A responsive portfolio website built to
+                            present my background, skills, and projects.
+                        </p>
+
+                        <a class="project-link"
+                           href="https://github.com/nysakatyal-dotcom/web-development-projects"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Repository ↗
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Let's Connect</h2>
+
+                    <p>
+                        I'm always learning and exploring new ideas.
+                        Visit my GitHub profile to see my projects
+                        and follow my progress.
+                    </p>
+
+                    <a class="button"
+                       href="https://github.com/nysakatyal-dotcom"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Connect on GitHub ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 My Portfolio. Built with HTML and CSS.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
+ 
