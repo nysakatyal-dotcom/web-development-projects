@@ -16,46 +16,80 @@ I'm a second-year Bachelor of Computer Applications (BCA) student interested in 
 
 ### 1. Personal Portfolio Website
 
-- **Description:** A personal website to introduce myself and showcase my skills and projects.
-- **Technologies:** HTML5, CSS3
-- **Status:** Planned
+A personal portfolio website created to introduce myself, showcase my skills, and present my web development projects.
+
+- **Technologies:** HTML5, CSS3, JavaScript
+- **Features:**
+  - Personal introduction
+  - Skills and interests
+  - Projects showcase
+  - Responsive design
+- **Status:** Completed
+- **Live Website:** [View Portfolio](https://nysakatyal-dotcom.github.io/web-development-projects/)
 
 ### 2. Interactive Calculator
 
-- **Description:** A calculator that performs basic arithmetic operations.
-- **Features:** Addition, subtraction, multiplication, and division.
+A simple and interactive calculator developed to practise JavaScript and implement basic mathematical operations.
+
 - **Technologies:** HTML5, CSS3, JavaScript
-- **Status:** Planned
+- **Features:**
+  - Addition, subtraction, multiplication, and division
+  - Interactive buttons
+  - Calculation display
+  - User-friendly interface
+- **Status:** Completed
+- **Live Website:** [Try the Calculator](https://nysakatyal-dotcom.github.io/web-development-projects/calculator/)
 
-### 3. Event Registration Website
+### 3. UNPLUGGED 2026 — Event Website
 
-- **Description:** A website displaying event details and providing a registration form.
-- **Features:** Event information, form validation, and responsive design.
+A fictional event-registration website designed with a modern black and neon-green theme. It showcases a creative event concept with an interactive registration interface.
+
 - **Technologies:** HTML5, CSS3, JavaScript
-- **Status:** Planned
+- **Features:**
+  - Modern black and neon-green design
+  - Event introduction and details
+  - Three featured events:
+    - Ideas Unfiltered
+    - Code After Dark
+    - Creative Frequency
+  - Event schedule
+  - Registration form with browser-side validation
+  - Interactive success message
+  - Responsive layout
+- **Status:** Completed
+- **Note:** The registration form is a demonstration only. Submitted information is not stored or transmitted to a server.
+- **Live Website:** [Visit UNPLUGGED 2026](https://nysakatyal-dotcom.github.io/web-development-projects/event-registration/)
 
-## 🎯 Learning Goals
+## 🎯 Learning Objectives
 
-- Learn to create structured web pages using HTML.
-- Practise styling and responsive design with CSS.
-- Understand JavaScript fundamentals and DOM manipulation.
-- Improve problem-solving and debugging skills.
-- Learn to publish websites using GitHub Pages.
+Through these projects, I aim to:
+
+- Strengthen my understanding of HTML, CSS, and JavaScript.
+- Build interactive and responsive websites.
+- Improve my problem-solving and debugging skills.
+- Gain practical experience in web development.
+- Learn how to manage projects using Git and GitHub.
+- Build a strong foundation for future software development projects.
 
 ## 🚀 Future Improvements
 
-- Complete the planned projects.
-- Make websites responsive on mobile and desktop.
-- Add animations and interactive features.
-- Explore APIs and database integration.
-- Deploy completed websites using GitHub Pages.
+- Develop more interactive web applications.
+- Explore advanced JavaScript concepts.
+- Learn front-end frameworks and libraries.
+- Improve website accessibility and responsiveness.
+- Explore back-end development and database integration.
+- Build projects that solve real-world problems.
 
 ## 👩‍💻 About Me
 
-I'm a second-year BCA student building my programming and web development skills through hands-on projects.
+I'm a second-year Bachelor of Computer Applications (BCA) student passionate about technology, creativity, and continuous learning.
 
-**GitHub Profile:** [nysakatyal-dotcom](https://github.com/nysakatyal-dotcom)
+I enjoy exploring new skills and applying my knowledge through practical projects. I'm currently developing my web development skills and building a portfolio to showcase my progress.
+
+## 📬 Connect With Me
+
+- **GitHub:** [@nysakatyal-dotcom](https://github.com/nysakatyal-dotcom)
 
 ---
 
-⭐ Thanks for visiting my repository!
+⭐ Thank you for visiting my repository! More projects and improvements are coming soon.
