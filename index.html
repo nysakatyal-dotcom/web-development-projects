@@ -1,10 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nysa Katyal's personal portfolio showcasing her BCA journey, programming skills, projects, interests, and goals.">
+
+    <meta name="description" content="Nysa Katyal's personal portfolio showcasing her BCA journey, programming skills, web development projects, and learning progress.">
 
     <title>Nysa Katyal | Aspiring Software Developer</title>
 
@@ -33,34 +34,39 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
             color: var(--text);
-            background: var(--white);
-            line-height: 1.75;
+            line-height: 1.7;
         }
 
         a {
-            color: inherit;
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .container {
-            width: min(1120px, 90%);
+            width: min(1100px, 90%);
             margin: 0 auto;
         }
 
         /* Navigation */
 
         header {
+            background: var(--navy);
+            color: var(--white);
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.97);
-            border-bottom: 1px solid var(--border);
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.12);
         }
 
-        .navbar {
-            min-height: 76px;
+        nav {
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -68,252 +74,197 @@
         }
 
         .logo {
-            color: var(--navy);
-            font-size: 1.35rem;
-            font-weight: 800;
-            text-decoration: none;
-            letter-spacing: -0.5px;
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: bold;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
+            justify-content: flex-end;
             flex-wrap: wrap;
-            gap: 22px;
-            list-style: none;
+            gap: 20px;
         }
 
         .nav-links a {
-            color: var(--navy-light);
+            color: #eaf1f8;
             font-size: 0.92rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            color: var(--blue);
         }
 
         /* Hero */
 
         .hero {
-            padding: 85px 0;
-            background: linear-gradient(135deg, #ffffff, #f1f6ff);
-        }
-
-        .hero-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
+            background: linear-gradient(
+                135deg,
+                var(--navy),
+                var(--navy-light)
+            );
+            color: var(--white);
+            padding: 90px 0;
         }
 
         .hero-content {
-            flex: 1 1 600px;
-            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
         }
 
         .eyebrow {
-            display: inline-block;
-            padding: 7px 15px;
-            margin-bottom: 22px;
-            border-radius: 30px;
-            background: var(--blue-light);
-            color: var(--blue);
-            font-size: 0.88rem;
-            font-weight: 700;
+            color: #bfdbfe;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
-        h1 {
-            color: var(--navy);
-            font-size: clamp(2.6rem, 6vw, 4.5rem);
-            line-height: 1.13;
-            letter-spacing: -2px;
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.15;
             margin-bottom: 20px;
         }
 
-        h1 span {
-            color: var(--blue);
+        .hero h1 span {
+            color: #93c5fd;
         }
 
-        .hero-description {
+        .hero p {
+            color: #e2e8f0;
             max-width: 650px;
-            color: var(--muted);
+            margin-bottom: 25px;
             font-size: 1.08rem;
-            margin-bottom: 28px;
         }
 
         .hero-image {
-            flex: 0 1 340px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .avatar {
-            display: block;
-            width: 100%;
-            max-width: 320px;
-            aspect-ratio: 1 / 1;
+            width: 230px;
+            height: 230px;
             object-fit: cover;
             border-radius: 50%;
-            border: 7px solid var(--white);
-            box-shadow: 0 15px 45px rgba(16, 42, 67, 0.14);
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            background: var(--white);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .buttons {
+        .button-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 13px;
+            gap: 12px;
+            margin-top: 25px;
         }
 
         .button {
             display: inline-block;
-            padding: 12px 21px;
-            border-radius: 9px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: 0.2s ease;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: var(--blue);
+            color: var(--white);
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
         }
 
         .button:hover {
+            background: #1d4ed8;
+            text-decoration: none;
             transform: translateY(-2px);
         }
 
-        .button-primary {
-            background: var(--navy);
+        .button-outline {
+            background: transparent;
+            border: 1px solid #cbd5e1;
             color: var(--white);
         }
 
-        .button-primary:hover {
-            background: var(--navy-light);
+        .button-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .button-secondary {
-            background: var(--white);
-            color: var(--navy);
-            border: 1px solid var(--border);
-        }
+        /* General sections */
 
-        .button-secondary:hover {
-            border-color: var(--blue);
-        }
-
-        /* Sections */
-
-        section:not(.hero) {
-            padding: 76px 0;
-        }
-
-        .alternate {
-            background: var(--background);
+        section {
+            padding: 75px 0;
         }
 
         .section-heading {
-            margin-bottom: 10px;
             color: var(--navy);
-            font-size: clamp(1.9rem, 4vw, 2.5rem);
-            line-height: 1.3;
-            letter-spacing: -0.8px;
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 12px;
         }
 
         .section-intro {
-            max-width: 720px;
-            margin-bottom: 30px;
             color: var(--muted);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .section-alt {
+            background: var(--white);
         }
 
         /* About */
 
-        .about-card {
-            padding: 30px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 15px;
-        }
-
-        .about-card p + p {
-            margin-top: 15px;
-        }
-
-        .personal-details {
+        .about-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 15px;
-            margin-top: 24px;
+            gap: 25px;
         }
 
-        .detail {
-            padding: 17px;
-            border-radius: 10px;
-            background: var(--blue-light);
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
         }
 
-        .detail strong {
-            display: block;
+        .section-alt .card {
+            background: var(--background);
+        }
+
+        .card h3 {
             color: var(--navy);
-            margin-bottom: 3px;
-        }
-
-        .detail span {
-            color: var(--muted);
-            overflow-wrap: anywhere;
+            margin-bottom: 12px;
         }
 
         /* Skills */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 18px;
         }
 
         .skill-card {
-            padding: 23px;
-            border: 1px solid var(--border);
-            border-radius: 13px;
+            padding: 22px 15px;
+            text-align: center;
+            border-radius: 12px;
             background: var(--white);
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .skill-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(16, 42, 67, 0.07);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
         }
 
         .skill-card h3 {
-            margin-bottom: 8px;
             color: var(--navy);
-            font-size: 1.12rem;
+            font-size: 1rem;
+            margin-bottom: 5px;
         }
 
         .skill-card p {
             color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        /* Education */
-
-        .education-card {
-            padding: 28px;
-            border-left: 4px solid var(--blue);
-            border-radius: 10px;
-            background: var(--white);
-            box-shadow: 0 5px 22px rgba(16, 42, 67, 0.05);
-        }
-
-        .education-card h3 {
-            color: var(--navy);
-            margin-bottom: 6px;
-        }
-
-        .education-card .institution {
-            color: var(--blue);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .education-card p {
-            color: var(--muted);
+            font-size: 0.88rem;
         }
 
         /* Projects */
@@ -321,201 +272,181 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
+            gap: 25px;
         }
 
         .project-card {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 27px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
             background: var(--white);
-            box-shadow: 0 5px 20px rgba(16, 42, 67, 0.04);
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 28px;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(16, 42, 67, 0.08);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
         }
 
         .project-tag {
             display: inline-block;
-            margin-bottom: 14px;
-            padding: 5px 11px;
-            border-radius: 30px;
             background: var(--blue-light);
-            color: var(--blue);
-            font-size: 0.82rem;
-            font-weight: 700;
+            color: #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .project-card h3 {
             color: var(--navy);
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
         }
 
         .project-card p {
-            color: var(--muted);
             margin-bottom: 18px;
         }
 
-        .project-link {
-            margin-top: auto;
-            color: var(--blue);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Hobbies and goals */
-
-        .hobbies-list {
+        .project-links {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-top: 20px;
+            margin-top: auto;
+            padding-top: 5px;
         }
 
-        .hobby {
-            padding: 10px 16px;
-            border: 1px solid var(--border);
-            border-radius: 30px;
-            background: var(--white);
-            color: var(--navy);
-            font-weight: 600;
+        .project-link {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 0.92rem;
         }
 
-        .goals-list {
+        /* Learning and goals */
+
+        .list-card ul {
             padding-left: 22px;
         }
 
-        .goals-list li {
+        .list-card li {
             margin-bottom: 10px;
-            color: var(--text);
+        }
+
+        /* Hobbies */
+
+        .hobby-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hobby {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 12px 20px;
+            color: var(--navy);
+            font-weight: bold;
         }
 
         /* Contact */
 
         .contact-box {
-            padding: 38px;
-            border-radius: 17px;
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .contact-box h2 {
-            margin-bottom: 12px;
-            font-size: 2rem;
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 35px;
         }
 
         .contact-box p {
-            margin-bottom: 22px;
-            color: #dbeafe;
+            margin-bottom: 20px;
         }
 
-        .contact-box .button {
-            background: var(--white);
-            color: var(--navy);
-        }
-
-        .contact-email {
-            display: inline-block;
-            margin: 0 0 22px;
-            color: #ffffff;
-            text-decoration: underline;
-            overflow-wrap: anywhere;
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         /* Footer */
 
         footer {
-            padding: 25px 0;
-            border-top: 1px solid var(--border);
-            background: var(--white);
+            background: var(--navy);
+            color: #e2e8f0;
             text-align: center;
-            color: var(--muted);
-            font-size: 0.9rem;
+            padding: 25px 0;
         }
 
         footer p + p {
-            margin-top: 4px;
+            margin-top: 5px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
         }
 
         /* Responsive layout */
 
-        @media (max-width: 760px) {
-            .navbar {
+        @media (max-width: 800px) {
+            nav {
                 padding: 15px 0;
                 align-items: flex-start;
                 flex-direction: column;
-                gap: 10px;
             }
 
             .nav-links {
+                justify-content: flex-start;
                 gap: 12px 18px;
-                font-size: 0.9rem;
             }
 
             .hero {
-                padding: 60px 0;
-            }
-
-            .hero-layout {
-                flex-direction: column-reverse;
-                gap: 32px;
-                align-items: flex-start;
+                padding: 65px 0;
             }
 
             .hero-content {
-                width: 100%;
-                flex-basis: auto;
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 30px;
             }
 
             .hero-image {
-                width: 100%;
-                flex: none;
+                width: 180px;
+                height: 180px;
             }
 
-            .avatar {
-                max-width: 220px;
+            .button-group {
+                justify-content: center;
             }
 
-            h1 {
-                letter-spacing: -1.2px;
-            }
-
-            section:not(.hero) {
-                padding: 55px 0;
-            }
-
-            .skills-grid,
-            .projects-grid,
-            .personal-details {
-                grid-template-columns: 1fr;
-            }
-
-            .about-card,
-            .contact-box {
-                padding: 23px;
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
+        @media (max-width: 560px) {
+            section {
+                padding: 55px 0;
             }
 
-            *,
-            *::before,
-            *::after {
-                transition: none !important;
+            .about-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 25px 18px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -525,17 +456,17 @@
 
     <!-- Navigation -->
     <header>
-        <nav class="navbar container" aria-label="Main navigation">
-            <a class="logo" href="#home">Nysa Katyal.</a>
+        <nav class="container">
+            <a class="logo" href="#home">Nysa Katyal</a>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#learning">Learning</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -543,231 +474,165 @@
 
         <!-- Hero -->
         <section class="hero" id="home">
-            <div class="container hero-layout">
+            <div class="container hero-content">
 
-                <div class="hero-content">
-                    <span class="eyebrow">
-                        BCA Student · Aspiring Software Developer
-                    </span>
+                <div class="hero-text">
+                    <p class="eyebrow">BCA Student · Aspiring Software Developer</p>
 
                     <h1>
-                        Hi, I'm Nysa <span>Katyal.</span>
+                        Hi, I'm <span>Nysa Katyal</span>
                     </h1>
 
-                    <p class="hero-description">
+                    <p>
                         I'm a second-year Bachelor of Computer Applications
-                        student with a growing interest in programming,
-                        web development, and technology. I enjoy turning
-                        ideas into practical projects, exploring new tools,
-                        and learning something new every day.
+                        student interested in programming, web development,
+                        UI/UX design, and building practical projects.
+                        I'm continuously learning new technologies and
+                        turning ideas into working applications.
                     </p>
 
-                    <div class="buttons">
-                        <a class="button button-primary" href="#projects">
+                    <div class="button-group">
+                        <a class="button" href="#projects">
                             Explore My Projects
                         </a>
 
-                        <a class="button button-secondary" href="#contact">
-                            Get in Touch
+                        <a class="button button-outline"
+                           href="https://github.com/nysakatyal-dotcom"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visit My GitHub ↗
                         </a>
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <img
-                        src="avatar.png"
-                        alt="Illustrated avatar representing Nysa Katyal"
-                        class="avatar"
-                        width="320"
-                        height="320">
-                </div>
+                <img
+                    class="hero-image"
+                    src="avatar.png"
+                    alt="Illustrated avatar for Nysa Katyal"
+                    onerror="this.style.display='none'"
+                >
 
             </div>
         </section>
 
-        <!-- About Me -->
-        <section class="alternate" id="about">
+        <!-- About -->
+        <section id="about">
             <div class="container">
                 <h2 class="section-heading">About Me</h2>
 
                 <p class="section-intro">
-                    A little more about who I am, what I enjoy,
-                    and where I want to go.
+                    A little introduction to my academic journey,
+                    interests, and approach to learning.
                 </p>
 
-                <div class="about-card">
-                    <p>
-                        Hello! I'm Nysa Katyal, a second-year BCA student
-                        at JIMS VK. I'm interested in understanding how
-                        technology works and how programming can be used
-                        to solve everyday problems.
-                    </p>
+                <div class="about-grid">
 
-                    <p>
-                        I'm building my foundation in programming and
-                        web development through coursework, independent
-                        practice, and hands-on projects. I believe that
-                        consistency, curiosity, and learning from mistakes
-                        are important parts of becoming a better developer.
-                    </p>
+                    <article class="card">
+                        <h3>👩🏻‍💻 Who I Am</h3>
 
-                    <p>
-                        Apart from technology, I enjoy painting, baking,
-                        listening to music, and exploring new skills.
-                        These interests give me opportunities to be
-                        creative, try new things, and look at ideas
-                        from different perspectives.
-                    </p>
+                        <p>
+                            I'm a BCA student developing my foundation
+                            in computer science and software development.
+                            I enjoy exploring new technologies, solving
+                            problems, and creating projects that help me
+                            apply what I learn.
+                        </p>
+                    </article>
 
-                    <p>
-                        My goal is to continue growing technically,
-                        create useful projects, and prepare for future
-                        opportunities in software development.
-                    </p>
+                    <article class="card">
+                        <h3>🎯 My Approach</h3>
 
-                    <div class="personal-details">
-                        <div class="detail">
-                            <strong>Full Name</strong>
-                            <span>Nysa Katyal</span>
-                        </div>
+                        <p>
+                            I believe in learning through practice.
+                            My goal is to strengthen my programming
+                            fundamentals, improve my problem-solving
+                            skills, and build a portfolio that reflects
+                            my progress as a developer.
+                        </p>
+                    </article>
 
-                        <div class="detail">
-                            <strong>Age</strong>
-                            <span>19 years</span>
-                        </div>
-
-                        <div class="detail">
-                            <strong>Education</strong>
-                            <span>Bachelor of Computer Applications</span>
-                        </div>
-
-                        <div class="detail">
-                            <strong>Institution</strong>
-                            <span>JIMS VK</span>
-                        </div>
-
-                        <div class="detail">
-                            <strong>Current Focus</strong>
-                            <span>Programming and Web Development</span>
-                        </div>
-
-                        <div class="detail">
-                            <strong>Career Interest</strong>
-                            <span>Software Development</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Education -->
-        <section id="education">
+        <section class="section-alt" id="education">
             <div class="container">
                 <h2 class="section-heading">Education</h2>
 
                 <p class="section-intro">
-                    My academic background and areas of learning.
+                    My academic background and current studies.
                 </p>
 
-                <div class="education-card">
+                <div class="card">
                     <h3>Bachelor of Computer Applications (BCA)</h3>
 
-                    <p class="institution">JIMS VK</p>
+                    <p><strong>Institution:</strong> JIMS VK</p>
 
                     <p>
-                        Currently pursuing my second year of BCA and
-                        developing an understanding of programming,
-                        computer applications, data structures,
-                        databases, and web technologies through
-                        academic study and personal practice.
+                        <strong>Current status:</strong>
+                        Second-year undergraduate student
+                    </p>
+
+                    <p>
+                        <strong>Areas of study:</strong>
+                        Programming, data structures, databases,
+                        web development, and computer science fundamentals.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Skills -->
-        <section class="alternate" id="skills">
+        <section id="skills">
             <div class="container">
-                <h2 class="section-heading">Skills & Technologies</h2>
+                <h2 class="section-heading">Technical Skills</h2>
 
                 <p class="section-intro">
-                    The technologies I'm learning and practising as I
-                    build my foundation in software development.
+                    Technologies and tools I'm learning and practising.
+                    My proficiency grows as I complete more projects.
                 </p>
 
                 <div class="skills-grid">
 
                     <article class="skill-card">
                         <h3>Python</h3>
-                        <p>
-                            Learning programming logic, variables,
-                            conditions, loops, functions, and input
-                            validation through small projects such as
-                            a grade calculator and number guessing game.
-                        </p>
+                        <p>Programming fundamentals and mini projects</p>
                     </article>
 
                     <article class="skill-card">
-                        <h3>C Programming</h3>
-                        <p>
-                            Developing an understanding of fundamental
-                            programming concepts, control structures,
-                            functions, and problem-solving techniques.
-                        </p>
+                        <h3>C</h3>
+                        <p>Programming logic and fundamentals</p>
                     </article>
 
                     <article class="skill-card">
                         <h3>HTML5</h3>
-                        <p>
-                            Learning to structure web pages with semantic
-                            elements, headings, sections, links, forms,
-                            and accessible content.
-                        </p>
+                        <p>Web page structure</p>
                     </article>
 
                     <article class="skill-card">
                         <h3>CSS3</h3>
-                        <p>
-                            Practising page styling, colors, typography,
-                            spacing, Flexbox, Grid, and responsive
-                            layouts for mobile and desktop screens.
-                        </p>
+                        <p>Styling and responsive layouts</p>
                     </article>
 
                     <article class="skill-card">
                         <h3>JavaScript</h3>
-                        <p>
-                            Exploring programming for the web, including
-                            variables, functions, events, and making
-                            website elements interactive.
-                        </p>
+                        <p>Interactive web functionality</p>
                     </article>
 
                     <article class="skill-card">
                         <h3>SQL</h3>
-                        <p>
-                            Learning database fundamentals, tables,
-                            queries, filtering, sorting, and retrieving
-                            information from structured data.
-                        </p>
+                        <p>Database concepts and queries</p>
                     </article>
 
                     <article class="skill-card">
                         <h3>Git & GitHub</h3>
-                        <p>
-                            Practising repository management, committing
-                            changes, documenting projects, and publishing
-                            a website using GitHub Pages.
-                        </p>
+                        <p>Version control and project hosting</p>
                     </article>
 
                     <article class="skill-card">
-                        <h3>Figma & UI/UX</h3>
-                        <p>
-                            Exploring interface design, visual hierarchy,
-                            layouts, and the principles behind creating
-                            clear and user-friendly digital experiences.
-                        </p>
+                        <h3>Figma</h3>
+                        <p>UI/UX design exploration</p>
                     </article>
 
                 </div>
@@ -775,17 +640,18 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects">
+        <section class="section-alt" id="projects">
             <div class="container">
                 <h2 class="section-heading">My Projects</h2>
 
                 <p class="section-intro">
-                    Practical work that documents my learning journey
-                    and helps me apply programming concepts.
+                    A growing collection of practical projects
+                    documenting my development journey.
                 </p>
 
                 <div class="projects-grid">
 
+                    <!-- Python Mini Projects -->
                     <article class="project-card">
                         <span class="project-tag">Python</span>
 
@@ -793,140 +659,193 @@
 
                         <p>
                             A collection of beginner-friendly Python
-                            programs, including a student grade calculator,
-                            a number guessing game, and an animated GIF
-                            creator. These projects help me practise
+                            programs, including a grade calculator,
+                            a number guessing game, and a GIF creation
+                            project. These projects help me practise
                             programming logic and working with libraries.
                         </p>
 
-                        <a class="project-link"
-                           href="https://github.com/nysakatyal-dotcom/python-mini-projects"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            View GitHub Repository ↗
-                        </a>
+                        <div class="project-links">
+                            <a class="project-link"
+                               href="https://github.com/nysakatyal-dotcom/python-mini-projects"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                View Repository ↗
+                            </a>
+                        </div>
                     </article>
 
+                    <!-- Portfolio Website -->
                     <article class="project-card">
                         <span class="project-tag">HTML & CSS</span>
 
                         <h3>Personal Portfolio Website</h3>
 
                         <p>
-                            A responsive personal website built to present
-                            my background, skills, interests, and projects.
-                            It also gives me practical experience with
-                            page structure, styling, navigation, and
-                            publishing a website online.
+                            A responsive personal website created
+                            to showcase my background, skills, goals,
+                            and projects. Publishing it on GitHub Pages
+                            gives me practical experience with web
+                            development and deployment.
                         </p>
 
-                        <a class="project-link"
-                           href="https://nysakatyal-dotcom.github.io/web-development-projects/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            View Live Website ↗
-                        </a>
+                        <div class="project-links">
+                            <a class="project-link"
+                               href="https://nysakatyal-dotcom.github.io/web-development-projects/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                View Live Website ↗
+                            </a>
 
-                        <a class="project-link"
-                           href="https://github.com/nysakatyal-dotcom/web-development-projects"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            View Source Code ↗
-                        </a>
+                            <a class="project-link"
+                               href="https://github.com/nysakatyal-dotcom/web-development-projects"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                View Source Code ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Calculator -->
+                    <article class="project-card">
+                        <span class="project-tag">
+                            HTML, CSS & JavaScript
+                        </span>
+
+                        <h3>Interactive Calculator</h3>
+
+                        <p>
+                            A functional calculator with a navy-and-white
+                            interface. It supports addition, subtraction,
+                            multiplication, division, decimal numbers,
+                            clearing the display, deleting the last
+                            character, and remainder calculations.
+                        </p>
+
+                        <div class="project-links">
+                            <a class="project-link"
+                               href="https://nysakatyal-dotcom.github.io/web-development-projects/calculator/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Try My Calculator ↗
+                            </a>
+
+                            <a class="project-link"
+                               href="https://github.com/nysakatyal-dotcom/web-development-projects/tree/main/calculator"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                View Source Code ↗
+                            </a>
+                        </div>
                     </article>
 
                 </div>
             </div>
         </section>
 
-        <!-- Interests and Hobbies -->
-        <section class="alternate" id="interests">
+        <!-- Learning and Goals -->
+        <section id="learning">
             <div class="container">
-                <h2 class="section-heading">Interests & Hobbies</h2>
+                <h2 class="section-heading">Currently Learning & Goals</h2>
 
                 <p class="section-intro">
-                    The things I enjoy outside my academic and technical
-                    learning journey.
+                    The areas I'm focusing on as I continue
+                    developing my technical skills.
                 </p>
 
-                <div class="about-card">
-                    <p>
-                        I enjoy activities that let me express creativity,
-                        relax, and discover new interests. Painting gives
-                        me a creative outlet, baking lets me experiment
-                        with new ideas, and music is one of my favourite
-                        ways to unwind.
-                    </p>
+                <div class="about-grid">
 
-                    <p>
-                        I also enjoy exploring new skills and learning
-                        about things beyond my usual routine.
-                    </p>
+                    <article class="card list-card">
+                        <h3>📚 Currently Learning</h3>
 
-                    <div class="hobbies-list">
-                        <span class="hobby">Painting</span>
-                        <span class="hobby">Baking</span>
-                        <span class="hobby">Listening to Music</span>
-                        <span class="hobby">Exploring New Skills</span>
-                    </div>
+                        <ul>
+                            <li>
+                                Strengthening Python and C programming
+                                fundamentals.
+                            </li>
+
+                            <li>
+                                Learning web development with HTML,
+                                CSS, and JavaScript.
+                            </li>
+
+                            <li>
+                                Improving problem-solving through coding.
+                            </li>
+
+                            <li>
+                                Exploring database concepts and SQL.
+                            </li>
+
+                            <li>
+                                Developing design skills with Figma.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="card list-card">
+                        <h3>🚀 My Goals</h3>
+
+                        <ul>
+                            <li>Build practical, well-documented projects.</li>
+
+                            <li>
+                                Strengthen my understanding of software
+                                development.
+                            </li>
+
+                            <li>
+                                Improve my technical and problem-solving
+                                skills.
+                            </li>
+
+                            <li>
+                                Explore internship opportunities and
+                                industry-relevant technologies.
+                            </li>
+                        </ul>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- Goals -->
-        <section id="goals">
+        <!-- Hobbies -->
+        <section class="section-alt" id="hobbies">
             <div class="container">
-                <h2 class="section-heading">My Goals</h2>
+                <h2 class="section-heading">Hobbies & Interests</h2>
 
                 <p class="section-intro">
-                    What I'm working towards as I continue developing
-                    my technical skills.
+                    Outside coding, I enjoy creative activities
+                    and exploring new interests.
                 </p>
 
-                <ul class="goals-list">
-                    <li>
-                        Strengthen my programming fundamentals and
-                        problem-solving abilities.
-                    </li>
-                    <li>
-                        Build more practical projects using Python,
-                        C, HTML, CSS, and JavaScript.
-                    </li>
-                    <li>
-                        Improve my understanding of databases,
-                        data structures, and software development.
-                    </li>
-                    <li>
-                        Maintain well-documented repositories and
-                        keep improving my GitHub portfolio.
-                    </li>
-                    <li>
-                        Gain practical experience and prepare for
-                        suitable internship opportunities.
-                    </li>
-                </ul>
+                <div class="hobby-list">
+                    <span class="hobby">🎨 Painting</span>
+                    <span class="hobby">🧁 Baking</span>
+                    <span class="hobby">🎵 Listening to Music</span>
+                    <span class="hobby">✨ Exploring New Skills</span>
+                </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section class="alternate" id="contact">
+        <section id="contact">
             <div class="container">
-                <div class="contact-box">
-                    <h2>Let's Connect</h2>
+                <h2 class="section-heading">Let's Connect</h2>
 
+                <p class="section-intro">
+                    I'm interested in learning, collaborating,
+                    and connecting with people in technology.
+                </p>
+
+                <div class="contact-box">
                     <p>
-                        I'm always interested in learning, exploring
-                        ideas, and connecting through technology.
-                        Feel free to explore my projects or contact
-                        me by email.
+                        Feel free to explore my repositories
+                        or reach out through email.
                     </p>
 
-                    <a class="contact-email"
-                       href="mailto:nysakatyal19@gmail.com">
-                        nysakatyal19@gmail.com
-                    </a>
-
-                    <div class="buttons">
+                    <div class="contact-links">
                         <a class="button"
                            href="https://github.com/nysakatyal-dotcom"
                            target="_blank"
@@ -945,15 +864,14 @@
 
     </main>
 
-    <!-- Copyright -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>
-                &copy; 2026 Nysa Katyal. All rights reserved.
-            </p>
+            <p>&copy; 2026 Nysa Katyal. All rights reserved.</p>
             <p>Designed with care and built with curiosity.</p>
         </div>
     </footer>
 
 </body>
 </html>
+```
